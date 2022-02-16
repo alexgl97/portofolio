@@ -144,6 +144,14 @@ ul{
     text-align: center;
 }
 
+.s2 img{
+    background-size: cover;
+    width: 100%;
+}
+
+.v-dark{
+    background-color: #010101 !important;
+}
 .s3{
     /* background: chocolate; */
     text-align: center;
