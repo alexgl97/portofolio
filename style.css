@@ -647,11 +647,27 @@ background-image: linear-gradient(90deg, #2f4353 0%, #d2ccc4 74%);
 
     .ss1{
         margin: 0 auto;
+    
+    }
+    
+}
+@media only screen and (max-width: 412px) {
+   
+    .about-me{
+        width: 250px;
+        display: block;
+        margin: 0 auto;
     }
 }
 
 @media only screen and (max-width: 390px) {
     .about-me{
-       width: 200px;
+       width: 250px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .about-myself{
+       width: 220px;
+       margin-right: 20px;
     }
 }
