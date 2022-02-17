@@ -5,6 +5,9 @@
 }
 html {
     scroll-behavior: smooth;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
   }
 
 body{
@@ -14,7 +17,18 @@ body{
     font-size: 1.2rem;
     font-family: 'Roboto', sans-serif;
     font-family: 'Source Sans Pro', sans-serif;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    
 
+}
+.hero{
+    height: 1000px;
+    background: url(./img/2.jpg);
+    background-size: cover;
+    width: 100%;
+   
 }
 .btn{
     width: 150px;
@@ -31,7 +45,6 @@ body{
     justify-content: space-evenly;
     align-items: center;
     padding: 1rem; 
-    border-radius: 2%;
    /*Delete this */
 }
 
@@ -66,12 +79,7 @@ z-index: 999;
     border-bottom: 2px solid #fff;
 }
 
-.hero{
-    height: 1000px;
-    background: url(./img/2.jpg);
-    background-size: cover;
-   
-}
+
 .s1{
     padding-top: 3rem;
 }
@@ -94,10 +102,7 @@ z-index: 999;
 .s1 p{
     color: #f4f4f4;
 }
-.about-me{
-    width: 500px;
-    margin: 0 auto;
-}
+
 li, a, button {
     text-decoration: none;
 }
@@ -171,9 +176,15 @@ ul{
 .about{
     height: 750px;
     width: 100%;
-    background-color: #ededed;
+    /* background-color: #b1bfd8;
+    background-image: linear-gradient(45deg, #b1bfd8 0%, #6782b4 74%); */
+    background-color: #2f4353;
+background-image: linear-gradient(360deg, #2f4353 0%, #d2ccc4 74%);
 }
-
+.about-me{
+    width: 500px;
+    margin: 0 auto;
+}
 .about-message{
     height: 100px;
     text-align: center;
@@ -214,14 +225,7 @@ ul{
 }
 
 
-.s4 h1 {
-    font-size: 3.7rem;
-    font-weight: 900;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 2rem;
-    
-}
+
 .border{
     max-width: 250px;
     margin: 0 auto;
@@ -239,6 +243,15 @@ ul{
     height: 600px;
     padding-top: 2rem;
     
+    
+}
+
+.s4 h1 {
+    font-size: 3.7rem;
+    font-weight: 900;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
     
 }
 
@@ -283,8 +296,11 @@ input[type=submit] {
 .footer{
     /* background: cyan; */
     height: 120px;
-    word-wrap: break-word;
-    background-color: #ededed;
+    width: 100%;
+    /* background-color: #b1bfd8;
+background-image: linear-gradient(90deg, #b1bfd8 0%, #6782b4 74%); */
+background-color: #2f4353;
+background-image: linear-gradient(90deg, #2f4353 0%, #d2ccc4 74%);
     
     
 }
@@ -292,8 +308,9 @@ input[type=submit] {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     text-align: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    margin: 0 auto;
 } 
 
  
@@ -330,6 +347,7 @@ input[type=submit] {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin: 10px;
+    height: 100%;
     
   }
 
@@ -362,9 +380,27 @@ input[type=submit] {
 .fa-youtube::before{
     color: #1A1A40;
 }
+@media only screen and (max-width: 992px) {
+    .about{
+        height: 900px;
+    }
+
+    .footer-center{
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        margin-right: 200px;
+    }
+    .card{}
+    
+}
 
 
-@media screen and (max-width: 780px) {
+
+@media only screen and (max-width: 768px) {
     .right-side{
         display: block;
         text-align: center;
@@ -403,17 +439,144 @@ input[type=submit] {
         padding-bottom: 5%;
         border-radius: 1%;
     }
-    .fa-youtube::before{
-        color: red;
-    }
+
     .projects{
         height: auto;
         display: block;
     }    
     .about{
-        height: 950px;
+        height: 1200px;
         width: 100%;
-        background-color: #ededed;
+    }
+    .box{
+        width: 340px;
+        text-align: center;
+    }
+
+    .s4{
+        /* background: cornflowerblue; */
+        text-align: center;
+        height: 600px;
+        padding-top: 2rem;
+        
+        
+    }
+    
+    .my-form{
+        margin-top: 1rem;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    form{
+        max-width: 650px;
+        margin: 0 auto;
+    
+    }
+    
+    input[type=text]{
+        width: 95%;
+        padding: 10px;
+        margin: 5px;
+        display: inline-block;
+        border-radius: 4px;
+        overflow: auto;
+    }
+    textarea {
+        width: 95%;
+        height: 50px;
+        padding: 10px;
+        margin: 5px;
+        display: inline-block;
+        border-radius: 4px;
+        overflow: auto;
+    }
+    
+    input[type=submit] {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        margin: 15px auto;
+        background-color: #1A1A40;
+    }
+    
+    .footer{
+        height: 350px;
+        width: 100%;
+    }
+    .footer-center{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 350px;
+        margin: 0 auto;
+    }
+    .footer-center:first-child{
+        padding-top: 1rem;
+    }
+
+    .ss1{
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    .right-side{
+        display: block;
+        text-align: center;
+        padding: 5px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+        background-color: #010101;
+        z-index: 999;
+    }
+    .right-side ul {
+        display: flex;
+        margin: 0 auto;
+        padding: 0.5rem;
+        justify-content: center;
+        
+    }
+    
+    .right-side a{
+        color: #fff;
+        padding: 10px;
+        margin: 0 10px;
+    }
+    .v-dark{
+        display: block;
+        margin: 15% auto;
+        padding: 2%;
+    }
+    .s2 img{
+        background-size: cover;
+        width: 95%;
+        padding-bottom: 5%;
+        border-radius: 1%;
+    }
+
+    .projects{
+        height: auto;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }   
+    .card{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+    .about{
+        height: 1100px;
+        width: 100%;
     }
     .box{
         width: 340px;
@@ -486,3 +649,4 @@ input[type=submit] {
         margin: 0 auto;
     }
 }
+
