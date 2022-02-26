@@ -53,12 +53,11 @@ ul{
 
 /* Hero */
 .hero{
-    background: url(./img/2.jpg);
-    background-position: center center;
-    background-size: cover;
-    width: 100%;
     height: 1000px;
-   
+    width: 100%;
+    background: url(./img/2.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 
 .right-side{
@@ -95,6 +94,7 @@ ul{
 
 .s1{
     padding-top: 3rem;
+    height: fit-content;
 }
 .s1 h1{
     font-size: 5rem;
@@ -123,9 +123,7 @@ ul{
 
 /* S2 */
 .s2{
-    /* background: chartreuse; */
-    text-align: center;
-
+    height: 1200px;
 }
 
 .second-container{
@@ -147,6 +145,8 @@ ul{
 }
 
 .projects{
+    height: 45%;
+    width: 100%;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
@@ -154,19 +154,26 @@ ul{
     text-align: center;
     justify-content: center;
     align-items: center;
-    height: 1000px;
+    
+
 
 }
-.projects div {
+.projects div { 
+    width: 100%;
+    height: 100%;
     padding: 2rem;
-    height: 250px;
     text-align: center;
-    height: 400px;
+   
+}
+
+.project{
+    width: 100%;
+    height: 100%;
 }
 .s2 img{
     background-size: cover;
-    background-position: center center;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .v-dark{
@@ -187,8 +194,6 @@ ul{
 .about{
     height: 750px;
     width: 100%;
-    /* background-color: #b1bfd8;
-    background-image: linear-gradient(45deg, #b1bfd8 0%, #6782b4 74%); */
     background-color: #2f4353;
     background-image: linear-gradient(360deg, #2f4353 0%, #d2ccc4 74%);
 }
@@ -335,14 +340,31 @@ input[type=submit] {
 .fa-youtube::before{
     color: #1A1A40;
 }
-
-@media only screen and (max-width: 992px) {
-    .about{
-        height: 900px;
+/* Media queries */
+@media only screen and (max-width: 1200px) {
+    .s1{
+        height: 500px;
     }
+    .about{
+        height: 800px;
+    }
+    .s2{
+        height: fit-content;
+    }
+}
+@media only screen and (max-width: 992px) {
     .hero{
         background-position: center center;
     }
+    .about{
+        height:1000px;
+    }
+    
+    .projects div {
+        width: 100%;
+        height: 100%;
+    }
+   
 
     .footer-center{
         display: grid;
@@ -360,6 +382,9 @@ input[type=submit] {
 
 
 @media only screen and (max-width: 768px) {
+    .about{
+        height: 1200px;
+    }
     .right-side{
         display: block;
         text-align: center;
@@ -392,6 +417,9 @@ input[type=submit] {
         margin: 15% auto;
         padding: 2%;
     }
+    .s2{
+        height: fit-content;
+    }
     .s2 img{
         background-size: cover;
         width: 95%;
@@ -404,7 +432,7 @@ input[type=submit] {
         display: block;
     }    
     .about{
-        height: 1200px;
+        height: fit-content;
         width: 100%;
     }
     .box{
@@ -413,7 +441,6 @@ input[type=submit] {
     }
 
     .s4{
-        /* background: cornflowerblue; */
         text-align: center;
         height: 600px;
         padding-top: 2rem;
@@ -460,7 +487,7 @@ input[type=submit] {
     }
     
     .footer{
-        height: 350px;
+        height: fit-content;
         width: 100%;
     }
     .footer-center{
@@ -478,10 +505,20 @@ input[type=submit] {
     .ss1{
         margin: 0 auto;
     }
+    .about{
+        height: 1000px;
+    }
+    .about-me{
+        margin: 0 auto;
+    } 
 }
 
 
+
 @media only screen and (max-width: 450px) {
+    .s1{
+        height: fit-content;
+    }
     .right-side{
         display: block;
         text-align: center;
@@ -538,6 +575,10 @@ input[type=submit] {
     .about-me{
         margin: 0 auto;
     } 
+    .about{
+        height: 1000px;
+    }
+
 }
 @media only screen and (max-width: 414px) {
    
@@ -546,11 +587,16 @@ input[type=submit] {
         display: block;
         margin: 0 auto;
     }
+    .about{
+        height: 1000px;
+    }
 }
+
 
 @media only screen and (max-width: 390px) {
     .hero{
         background-position: center center;
+        height: 700px;
     }
     .s1{
         margin: 0 auto;
@@ -558,10 +604,26 @@ input[type=submit] {
     .about-me{
        width: 250px;
     }
+    .s2{
+        height: 2300px;
+    }
+    .about{
+        height: 1000px;
+    }
 }
 @media only screen and (max-width: 360px) {
+    .about{
+        height: 1100px;
+    }
     .about-myself{
        width: 220px;
        margin-right: 20px;
     }
+    .about-me{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    
 }
